@@ -514,10 +514,30 @@ footer {
   .top-nav {
     padding: 17px 15px 13px 15px;
     margin: 0; }
+    .top-nav .row {
+      overflow: hidden; }
     .top-nav_logo img {
       width: 145px; }
     .top-nav_menu {
-      display: none; }
+      display: block;
+      background: #cdd;
+      transform: translateX(100%);
+      transition: 1s;
+      height: 0; }
+      .top-nav_menu ul {
+        transform: translateX(100%);
+        transition: 1s; }
+      .top-nav_menu.open {
+        transform: translateX(0);
+        height: auto; }
+        .top-nav_menu.open ul {
+          transform: translateX(0); }
+      .top-nav_menu li a {
+        position: relative; }
+        .top-nav_menu li a i {
+          position: absolute;
+          right: 0;
+          transform: rotate(-90deg); }
     .top-nav_phone {
       display: none; }
     .top-nav .mobile {
@@ -529,13 +549,46 @@ footer {
           fill: #302783;
           width: 19px;
           height: 19px; }
-      .top-nav .mobile-menu {
+      .top-nav .mobile-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
         position: absolute;
-        right: 0; }
-        .top-nav .mobile-menu svg {
-          fill: #302783;
-          width: 19px;
-          height: 19px; }
+        right: -2px;
+        top: -12px;
+        -webkit-tap-highlight-color: transparent; }
+        .top-nav .mobile-btn span {
+          position: absolute;
+          top: 50%;
+          margin-top: -1px;
+          left: 50%;
+          margin-left: -10px;
+          background: #302783;
+          width: 20px;
+          height: 2px; }
+          .top-nav .mobile-btn span::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #302783;
+            transform: translateY(7px);
+            transition: .2s; }
+          .top-nav .mobile-btn span::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #302783;
+            transform: translateY(-9px);
+            transition: .2s; }
+        .top-nav .mobile-btn_active span {
+          height: 0; }
+          .top-nav .mobile-btn_active span::before {
+            transform: rotate(-135deg) translateX(-1px); }
+          .top-nav .mobile-btn_active span::after {
+            transform: rotate(135deg) translateX(-2px); }
   .slider {
     overflow: hidden; }
   .new-dots {

@@ -40,12 +40,12 @@
 							C474.946,420.878,480.571,397.035,475.009,380.316z"/>
 					</svg>
 				</a>
-				<a class="mobile-menu">
+				<a href="#" class="mobile-btn">
 					<span></span>
 				</a>
 			</div>
 
-			<nav class="col-auto"> 
+			<nav class="col-12 col-xl-auto"> 
 				<ul class="top-nav_menu">
 					<li><a href="#">О компании</a></li>
 					<li><a href="#">Продукция<i class="icon-angle-down"></i></a>
@@ -392,15 +392,15 @@
 
 
 
-		<!-- <section class="">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-12"> 
+<!-- <section class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12"> 
 
-					</div>
-				</div>
 			</div>
-		</section> -->
+		</div>
+	</div>
+</section> -->
 
 
 
@@ -424,6 +424,17 @@
 
 <script src="slick/slick.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
+
+<!-- Menu mobile button -->
+<script>
+	$(".mobile-btn").on('click',function(e) {
+		e.preventDefault;
+		$(this).toggleClass('mobile-btn_active');
+		$(".top-nav_menu").toggleClass('open');
+	});
+</script>
+
+
 
 <!-- Slick slider -->
 <script>
@@ -506,6 +517,7 @@
 		}
     })
 </script>
+
 </body>
 </html>
 
